@@ -3,7 +3,7 @@ import copy
 
 class IPhone:
 
-    def __init__(self, name, details):
+    def __init__(self, name: str, details: dict):
         self.name = name
         self.details = details
 
@@ -50,10 +50,5 @@ if __name__ == "__main__":
     iPhone_4_32_GB.name = 'iPhone 4 32 GB'
     iPhone_4_32_GB.details['memory'] = '32 GB'
 
-    iPhone_4_64_GB = copy.deepcopy(iPhone_4_16_GB)
-    iPhone_4_64_GB.name = 'iPhone 4 64 GB'
-    iPhone_4_64_GB.details['memory'] = '64 GB'
-
-    print(iPhone_4_64_GB.name, iPhone_4_64_GB.details)
     print(iPhone_4_32_GB.name, iPhone_4_32_GB.details)
     print(iPhone_4_16_GB.name, iPhone_4_16_GB.details)
