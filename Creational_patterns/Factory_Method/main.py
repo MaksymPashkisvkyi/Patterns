@@ -1,10 +1,17 @@
 from abc import ABC, abstractmethod
 
 
+class Drink(ABC):
+
+    @abstractmethod
+    def get_drink(self) -> str:
+        pass
+
+
 class DrinkMachine(ABC):
 
     @abstractmethod
-    def make_drink(self):
+    def make_drink(self) -> Drink:
         pass
 
     def get_order(self):
@@ -15,21 +22,14 @@ class DrinkMachine(ABC):
 
 class TeaMachine(DrinkMachine):
 
-    def make_drink(self):
+    def make_drink(self) -> Drink:
         return Tea()
 
 
 class CoffeeMachine(DrinkMachine):
 
-    def make_drink(self):
+    def make_drink(self) -> Drink:
         return Coffee()
-
-
-class Drink(ABC):
-
-    @abstractmethod
-    def get_drink(self):
-        pass
 
 
 class Coffee(Drink):
@@ -52,11 +52,10 @@ class Client:
 
 
 if __name__ == '__main__':
-    client = Client
+    client = Client()
 
     print("\nTea order")
     client.make_order(TeaMachine())
 
     print("\nCoffee order")
     client.make_order(CoffeeMachine())
-
