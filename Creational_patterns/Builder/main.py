@@ -23,7 +23,7 @@ class Engineer(ABC):
         pass
 
 
-class Machine:
+class Machine(ABC):
 
     def __init__(self) -> None:
         self.parts = []
@@ -53,7 +53,7 @@ class PlaneEngineer(Engineer):
         self.reset()
 
     def reset(self):
-        self._product = Plane()
+        self._product = Machine()
 
     @property
     def product(self) -> None:
@@ -77,7 +77,7 @@ class ShipEngineer(Engineer):
         self.reset()
 
     def reset(self):
-        self._product = Ship()
+        self._product = Machine()
 
     @property
     def product(self) -> None:
@@ -101,7 +101,7 @@ class CarEngineer(Engineer):
         self.reset()
 
     def reset(self):
-        self._product = Car()
+        self._product = Machine()
 
     @property
     def product(self) -> None:
@@ -133,9 +133,9 @@ class Director:
         self._engineer = engineer
 
     def build_full_featured_product(self) -> None:
-        self.engineer.design_cabin()
-        self.engineer.design_engine()
-        self.engineer.design_control_system()
+        self._engineer.design_cabin()
+        self._engineer.design_engine()
+        self._engineer.design_control_system()
 
 
 if __name__ == "__main__":
