@@ -4,39 +4,39 @@ from abc import ABC, abstractmethod
 class Coffee(ABC):
 
     @abstractmethod
-    def get_coffee(self):
+    def get_coffee(self) -> str:
         pass
 
 
 class Espresso(Coffee):
 
-    def get_coffee(self):
-        print("espresso")
+    def get_coffee(self) -> str:
+        return "espresso"
 
 
 class Americano(Coffee):
 
-    def get_coffee(self):
-        print("americano")
+    def get_coffee(self) -> str:
+        return "americano"
 
 
 class Tea(ABC):
 
     @abstractmethod
-    def get_tea(self):
+    def get_tea(self) -> str:
         pass
 
 
 class GreenTea(Tea):
 
-    def get_tea(self):
-        print("green tea")
+    def get_tea(self) -> str:
+        return "green tea"
 
 
 class BlackTea(Tea):
 
-    def get_tea(self):
-        print("black tea")
+    def get_tea(self) -> str:
+        return "black tea"
 
 
 class DrinkMachine(ABC):
@@ -82,8 +82,8 @@ class Client:
         coffee = machine.make_coffee()
         tea = machine.make_tea()
 
-        coffee.get_coffee()
-        tea.get_tea()
+        print(coffee.get_coffee())
+        print(tea.get_tea())
 
 
 if __name__ == '__main__':
