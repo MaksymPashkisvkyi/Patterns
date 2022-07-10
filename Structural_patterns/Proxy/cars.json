@@ -1,0 +1,29 @@
+{
+  "cars": [
+    {
+      "id": 0,
+      "plate": "BH3234KO",
+      "color": "red",
+      "model": "Mersedes",
+      "type_of_taxi": "Universal",
+      "driver": "Ivanov"
+    },
+    {
+      "id": 1,
+      "plate": "BO2356AB",
+      "color": "green",
+      "model": "Subaru",
+      "type_of_taxi": "VIP",
+      "driver": "Alexandrov"
+    },
+    {
+      "id": 2,
+      "plate": "AA4578BO",
+      "color": "black",
+      "model": "Ford",
+      "type_of_taxi": "Minibus",
+      "driver": "Vasilev"
+    }
+
+  ]
+}

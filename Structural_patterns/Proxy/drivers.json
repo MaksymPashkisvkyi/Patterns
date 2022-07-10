@@ -1,0 +1,22 @@
+{
+  "drivers": [
+    {
+      "id": 0,
+      "name": "Ivanov",
+      "image": "None",
+      "rating": 4.3
+    },
+    {
+      "id": 1,
+      "name": "Alexandrov",
+      "image": "None",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Vasilev",
+      "image": "None",
+      "rating": 5.0
+    }
+  ]
+}
