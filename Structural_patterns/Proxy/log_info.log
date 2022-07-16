@@ -4,3 +4,5 @@ INFO:root:-----Make order-----
 INFO:root:[{'id': 2, 'name': 'Vasilev', 'image': 'None', 'rating': 5.0}, {'id': 2, 'plate': 'AA4578BO', 'color': 'black', 'model': 'Ford', 'type_of_taxi': 'Minibus', 'driver': 'Vasilev'}]
 INFO:root:-----Make order-----
 INFO:root:[{'id': 1, 'name': 'Alexandrov', 'image': 'None', 'rating': 4.5}, {'id': 1, 'plate': 'BO2356AB', 'color': 'green', 'model': 'Subaru', 'type_of_taxi': 'VIP', 'driver': 'Alexandrov'}]
+INFO:root:-----Make order-----
+INFO:root:[{'id': 1, 'name': 'Alexandrov', 'image': 'None', 'rating': 4.5}, {'id': 1, 'plate': 'BO2356AB', 'color': 'green', 'model': 'Subaru', 'type_of_taxi': 'VIP', 'driver': 'Alexandrov'}]
