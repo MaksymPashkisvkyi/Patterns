@@ -16,8 +16,8 @@ class Hospital(Organization):
         visitor.visit_hospital(self)
 
     @staticmethod
-    def exclusive_method_of_concrete_component_a() -> str:
-        return "A"
+    def hospital_method() -> str:
+        return "Hospital"
 
 
 class School(Organization):
@@ -26,8 +26,8 @@ class School(Organization):
         visitor.visit_school(self)
 
     @staticmethod
-    def special_method_of_concrete_component_b() -> str:
-        return "B"
+    def school_method() -> str:
+        return "School"
 
 
 class Cafe(Organization):
@@ -36,34 +36,34 @@ class Cafe(Organization):
         visitor.visit_cafe(self)
 
     @staticmethod
-    def special_method_of_concrete_component_b() -> str:
-        return "B"
+    def cafe_method() -> str:
+        return "Cafe"
 
 
 class Visitor(ABC):
 
     @abstractmethod
-    def visit_hospital(self, element: Hospital) -> None:
+    def visit_hospital(self, org: Hospital) -> None:
+        print()
+
+    @abstractmethod
+    def visit_school(self, org: School) -> None:
         pass
 
     @abstractmethod
-    def visit_school(self, element: School) -> None:
-        pass
-
-    @abstractmethod
-    def visit_cafe(self, element: Cafe) -> None:
+    def visit_cafe(self, org: Cafe) -> None:
         pass
 
 
 class Inspector(Visitor):
-    def visit_hospital(self, element: Hospital) -> None:
-        print("Inspector visit hospital.")
+    def visit_hospital(self, org) -> None:
+        print(f"Inspector visit {org.hospital_method()}.")
 
-    def visit_school(self, element: School) -> None:
-        print("Inspector visit school.")
+    def visit_school(self, org) -> None:
+        print(f"Inspector visit {org.school_method()}.")
 
-    def visit_cafe(self, element: Cafe) -> None:
-        print("Inspector visit cafe.")
+    def visit_cafe(self, org) -> None:
+        print(f"Inspector visit {org.cafe_method()}.")
 
 
 def client_code(organizations: List[Organization], inspector: Visitor) -> None:
@@ -74,7 +74,6 @@ def client_code(organizations: List[Organization], inspector: Visitor) -> None:
 if __name__ == "__main__":
     organizations = [Hospital(), School(), Cafe()]
 
-    print("The client code works with all visitors via the base Visitor interface:")
     inspector = Inspector()
     client_code(organizations, inspector)
 
